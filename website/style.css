@@ -1,0 +1,60 @@
+body /* The standard all encompassing body comments */
+{
+
+background-color: #74DCE0;
+
+}
+
+h1
+{
+    font-family: Verdana, sans-serif;
+    font-size: 1.8em;
+	color: #006A07;
+    text-align: center;
+}
+
+p
+{
+}
+
+p.example
+{
+    font-family: courier;
+    text-indent: 1cm;
+}
+
+ul
+{
+
+}
+
+a
+{
+    color: blue;
+}
+
+div.footer
+{
+    font-family: monospace;
+    font-size: small;
+	color: black;
+	text-align: center;
+}
+
+table.layout
+{
+    border: none;
+	border-style: none;
+	padding: 10;
+}
+/* Make the page more printable */
+@media print {
+    body
+	    {
+        background-color: white
+		}
+    h1.long
+	    {
+		color: black
+		}
+}

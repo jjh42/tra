@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title>Common Trash Library (libtra)</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+    <h1> What is Libtra</h1>
+    <p>
+        This is a library and utility program for a trashcan for UNIX systems.
+        A trashcan is a file (usually $HOME/.trash) where files are moved to
+        rather than being deleted - this allows easy recover later when some decides
+        that they really shouldn't have deleted that file.
+     </p>
+     <p>
+        To allow features like trashing a file with the same name multiple times
+        or automatically cleaning the trashbin of files trashed more than a month
+        ago etc. a database needs to be associated with the trash can.
+      </p>
+      <p>
+        This is a library named libtra and a utility program for using that library
+        to implement a trash can on a UNIX system.
+       </p>
+
+       <p>
+            For using the libtra library see the <a href="./tra-api/">api documentation.</a>
+            <br>
+            See the sourceforge  <a href="http://sourceforge.net/projects/tra/">project page</a>
+      </p>
+      <h1> Installing </h1>
+      <p>
+            To install libtra and the utility program tra (used in examples below) download the
+            <a href="http://prdownloads.sourceforge.net/tra/tra-0.0.1.tar.gz?download">source tar</a>
+            and follow the standard install instructions.
+
+      </p>
+       <p>
+            For installing this follows the usual GNU standard.
+            <p class="example">
+            <br/>
+            $ ./configure
+            <br/>
+            $ make
+            <br/>
+            $ su root
+            <br/>
+            $ make install.
+            <br/>
+            </p>
+        </p>
+        <p>
+            The utility named tra is a command line app for trashing rather than deleting
+            files. The most common use is
+            <p class="example">
+                tra filename [filename2] ...
+            </p>
+            This trashs the filename (can be more than one).
+        </p>
+        <p>
+            If you would like to list the files currently in the trashcan.
+            <p class="example">
+                tra -l
+            </p>
+            Displays a list of the trashed files and there original location.
+        </p>
+        <p>
+            If you would like to empty the trash can.
+            <p class="example">
+                tra -e
+            </p>
+            Note: This will ask for confirmation you really want to do this.
+        </p>
+        <p>
+            If you decide that you really did need a file trashed early
+            then.
+            <p class="example">
+            tra -r filename
+            </p>
+            Restores the named file.
+        </p>
+    </body>
+</html>
