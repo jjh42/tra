@@ -3,3 +3,8 @@ configure.in
 *.cache
 tra-api
 Makefile.in
+aclocal.m4
+acinclude.m4
+configure.files
+stamp-h.in
+subdirs
