@@ -1,0 +1,5 @@
+*.o
+.deps
+.lib
+libtra.la
+Makefile.in

@@ -1,0 +1,4 @@
+*.deps
+*.o
+tra
+Makefile.in

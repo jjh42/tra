@@ -1,0 +1,15 @@
+<!-- This is the DTD for the small data files that hold data about deleted files.
+
+ Initial version written by Jonathan Hunt <jhuntnz@users.sourceforge.net>
+--->
+
+<!-- Each file contains only one item with various attributes -->
+<!ELEMENT trash-info (item)>
+
+<!ELEMENT item>
+
+<!ATTLIST item
+	filetitle		CDATA		#REQUIRED
+	filepath		CDATA		#REQUIRED
+	datedeletion	CDATA		#REQUIRED	
+	>

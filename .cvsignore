@@ -1,0 +1,5 @@
+configure
+configure.in
+*.cache
+tra-api
+Makefile.in

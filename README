@@ -1,0 +1,39 @@
+This is a library and utility program for a trashcan for UNIX systems.
+A trashcan is a file (usually $HOME/.trash) where files are moved to
+rather than being deleted - this allows easy recover later when some decides
+that they really shouldn't have deleted that file.
+
+To allow features like trashing a file with the same name multiple times 
+or automatically cleaning the trashbin of files trashed more than a month 
+ago etc. a database needs to be associated with the trash can.
+
+This is a library named libtra and a utility program for using that library
+to implement a trash can on a UNIX system. 
+
+For using the libtra library see the api documentation.
+
+For installing this follows the usual GNU standard.
+$ ./configure
+$ make
+$ su root
+$ make install.
+
+The utility named tra is a command line app for trashing rather than deleting
+files. The most common use is
+    tra filename [filename2] ...
+This trashs the filename (can be more than one).
+
+If you would like to list the files currently in the trashcan.
+    tra -l
+Displays a list of the trashed files and there original location.
+
+If you would like to empty the trash can.
+    tra -e
+Note: This will ask for confirmation you really want to do this.
+
+If you decide that you really did need a file trashed early 
+then.
+    tra -r filename
+Restores the named file.
+
+
